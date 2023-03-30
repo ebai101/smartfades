@@ -30,7 +30,7 @@ def fade(buf, fade_dir, fade_type):
 
 def main():
     audio_data, audio_sr = librosa.load(sys.argv[1], sr=44100)
-    audio_data = librosa.util.normalize(audio_data)
+    # audio_data = librosa.util.normalize(audio_data)
 
     for fl in fade_array:
         # test buffer is last TEST_C samples + first TEST_C samples
