@@ -60,7 +60,7 @@ def main():
             # write to audio file
             audio_data[-test_c:] = test_buf[:test_c]
             audio_data[:test_c] = test_buf[test_c:]
-            sf.write("output.wav", np.concatenate((audio_data, audio_data)), audio_sr)
+            sf.write("output.wav", audio_data, audio_sr)
             return
 
 
