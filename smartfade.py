@@ -45,8 +45,8 @@ def main():
         )
 
         cA, cD2, cD1 = pywt.wavedec(
-            test_buf, "db4", level=2
-        )  # db4 wavelet decomposition
+            librosa.util.normalize(test_buf), "db1", level=2
+        )  # wavelet decomposition
         detail = cD2[
             int(len(cD2) * 3 / 8) : int(len(cD2) * 5 / 8)
         ]  # only the center of the 2nd level is of interest
